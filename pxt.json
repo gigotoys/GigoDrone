@@ -1,5 +1,5 @@
 {
-    "name": "pxt-codeDrone",
+    "name": "Gigo Drone",
     "version": "0.1.6",
     "description": "Drone control extension for micro:bit",
     "dependencies": {
