@@ -1,7 +1,7 @@
 /**
 * Functions to UVA by FLY-SHARK
 */
-//% color=#BFDF1A  icon="\uf072" block="Gigo Drone" blockId="drone"
+//% color=#5BC500 icon="\uf072" block="Gigo Drone" blockId="drone"
 //% groups='["Basic"]'
 namespace drone {
     let isInit = 0
