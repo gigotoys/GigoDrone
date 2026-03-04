@@ -1,7 +1,7 @@
 {
   "drone.takeOffAction": "take off",
   "drone.landingAction": "landing",
-  "drone.moveAction": "move action %directionState by %distance cm",
+  "drone.moveAction": "move %directionState by %distance cm",
   "drone.moveActionTime": "move %directionState by %second s",
   "drone.rotationAction": "rotate %rotationState by %angle °",
   "drone.droneHeight": "drone height",
