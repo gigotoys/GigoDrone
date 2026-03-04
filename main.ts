@@ -75,7 +75,7 @@ namespace drone {
      * Drone landing action
      */
     //% block="landing action"
-    //% weight=89 group="Basic"
+    //% weight=95 group="Basic"
     export function landingAction(): void {
         initModule()
         let txBuff = pins.createBuffer(8)
@@ -89,7 +89,7 @@ namespace drone {
      * Drone takeoff action
      */
     //% block="take off action"
-    //% weight=89 group="Basic"
+    //% weight=95 group="Basic"
     export function takeOffAction(): void {
         initModule()
         for (let index = 3; index >= 0; index--) {
@@ -114,7 +114,7 @@ namespace drone {
      */
     //% block="set drone height $height cm"
     //% height.min=0 height.max=100
-    //% weight=90 group="Basic"
+    //% weight=91 group="Basic"
     export function setDroneHeight(height: number): void {
         initModule()
         let txBuff = pins.createBuffer(8)
