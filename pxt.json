@@ -8,10 +8,10 @@
     "files": [
         "README.md",
         "main.ts",
-        "_locales/zh-CN/pxt-codeDrone-strings.json",
-        "_locales/zh-CN/pxt-codeDrone-jsdoc-strings.json",
-        "_locales/zh-TW/pxt-codeDrone-strings.json",
-        "_locales/zh-TW/pxt-codeDrone-jsdoc-strings.json"
+        "_locales/zh-CN/Gigo Drone-strings.json",
+        "_locales/zh-CN/Gigo Drone-jsdoc-strings.json",
+        "_locales/zh-TW/Gigo Drone-strings.json",
+        "_locales/zh-TW/Gigo Drone-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
