@@ -130,7 +130,7 @@ namespace drone {
      * @param directionState The direction in which the drone moves, which can be left, right, forward, or backward
      * @param distance Drone moving distance
      */
-    //% block="move action %directionState by %distance cm"
+    //% block="move %directionState by %distance cm"
     //% weight=70 group="Basic"
     export function moveAction(directionState: DirectionOptions, distance: number): void {
         initModule()
@@ -150,7 +150,7 @@ namespace drone {
      * @param rotationState The rotation direction of the drone, which can be left or right
      * @param angle Drone rotation angle
      */
-    //% block="rotation action %rotationState by %angle °"
+    //% block="rotate %rotationState by %angle °"
     //% weight=65 group="Basic"
     export function rotationAction(rotationState: AngleOptions, angle: number): void {
         initModule()
