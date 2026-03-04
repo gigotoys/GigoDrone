@@ -1,5 +1,5 @@
 # CodeDrone
-![]([https://raw.githubusercontent.com/gigotoys/GigoDrone/main/image.jpg])
+![Gigo Drone](https://raw.githubusercontent.com/gigotoys/GigoDrone/main/image.jpg)
 
 CodeDrone is a DIY STEAM drone that uses the micro:bit for programming and flight control.
 
