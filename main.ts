@@ -74,7 +74,7 @@ namespace drone {
     /**
      * Drone landing action
      */
-    //% block="landing action"
+    //% block="landing"
     //% weight=95 group="Basic"
     export function landingAction(): void {
         initModule()
@@ -88,7 +88,7 @@ namespace drone {
     /**
      * Drone takeoff action
      */
-    //% block="take off action"
+    //% block="take off"
     //% weight=95 group="Basic"
     export function takeOffAction(): void {
         initModule()
