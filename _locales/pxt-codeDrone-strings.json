@@ -1,8 +1,8 @@
 {
   "drone.AngleOptions.Left|block": "left",
   "drone.AngleOptions.Right|block": "right",
-  "drone.landingAction|block": "landing action",
-  "drone.takeOffAction|block": "take off action",
+  "drone.landingAction|block": "landing",
+  "drone.takeOffAction|block": "take off",
   "drone.DirectionOptions.Backward|block": "backward",
   "drone.DirectionOptions.Down|block": "down",
   "drone.DirectionOptions.Forward|block": "forward",
