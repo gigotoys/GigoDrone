@@ -1,7 +1,7 @@
 /**
 * Functions to UVA by FLY-SHARK
 */
-//% color=#5BC500 icon="\uf072" block="Gigo Drone" blockId="drone"
+//% color=#5BC500  icon="\uf072" block="Gigo Drone" blockId="drone"
 //% groups='["Basic"]'
 namespace drone {
     let isInit = 0
@@ -72,23 +72,26 @@ namespace drone {
         }
     }
     /**
-     * Drone landing action
+     * Set the drone to a given height
+     * @param height The height at which the drone will fly, measured in centimeters, with a maximum value of 100 and a minimum value of 0
      */
-    //% block="landing"
-    //% weight=95 group="Basic"
-    export function landingAction(): void {
+    //% block="set drone height $height cm"
+    //% height.min=0 height.max=100
+    //% weight=91 group="Basic"
+    export function setDroneHeight(height: number): void {
         initModule()
         let txBuff = pins.createBuffer(8)
         txBuff[0] = 0xa5
-        txBuff[1] = 0x06
-        txBuff[2] = 0x02
+        txBuff[1] = 0x01
+        txBuff[2] = height&0xff
+        txBuff[3] = (height>>8)&0xff
         serial.writeBuffer(txBuff)
         waitCallback()
     }
     /**
      * Drone takeoff action
      */
-    //% block="take off"
+    //% block="take off "
     //% weight=95 group="Basic"
     export function takeOffAction(): void {
         initModule()
@@ -107,21 +110,17 @@ namespace drone {
         serial.writeBuffer(txBuff)
         waitCallback()
     }
-    
     /**
-     * Set the drone to a given height
-     * @param height The height at which the drone will fly, measured in centimeters, with a maximum value of 100 and a minimum value of 0
+     * Drone landing action
      */
-    //% block="set drone height $height cm"
-    //% height.min=0 height.max=100
-    //% weight=91 group="Basic"
-    export function setDroneHeight(height: number): void {
+    //% block="landing"
+    //% weight=95 group="Basic"
+    export function landingAction(): void {
         initModule()
         let txBuff = pins.createBuffer(8)
         txBuff[0] = 0xa5
-        txBuff[1] = 0x01
-        txBuff[2] = height&0xff
-        txBuff[3] = (height>>8)&0xff
+        txBuff[1] = 0x06
+        txBuff[2] = 0x02
         serial.writeBuffer(txBuff)
         waitCallback()
     }
@@ -211,7 +210,11 @@ namespace drone {
                 return 0
             } else {
                 if (rowData[0] == 0x5a && rowData[1] == 0x82) {
-                    return (rowData[2])
+                    let altitude = rowData[2] | (rowData[3] << 8)
+                    if (altitude & 0x8000) {
+                        altitude = altitude - 0x10000
+                    }
+                    return (altitude)
                 }
             }
         }
